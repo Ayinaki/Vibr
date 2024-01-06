@@ -18,13 +18,20 @@ module.exports = {
         const player = useMainPlayer()
 
         const song = inter.options.getString('song');
+        const soundcloudlink = song.includes("soundcloud")
         const res = await player.search(song, {
             requestedBy: inter.member,
             searchEngine: QueryType.AUTO
         });
         const NoResultsEmbed = new EmbedBuilder()
             .setAuthor({ name: `No results found... try again ? ❌`})
-            .setColor('#2f3136')
+            .setColor('Random')
+
+        const SoundcloudLinkTest = new EmbedBuilder()
+            .setAuthor({ name: `Soundcloud links are currently broken! Try Youtube or Spotify! ❌`})
+            .setColor('Random')
+
+        if (soundcloudlink) return inter.editReply({ embeds: [SoundcloudLinkTest] });
 
         if (!res || !res.tracks.length) return inter.editReply({ embeds: [NoResultsEmbed] });
 
@@ -45,14 +52,14 @@ module.exports = {
 
             const NoVoiceEmbed = new EmbedBuilder()
                 .setAuthor({ name: `I can't join the voice channel... try again ? ❌`})
-                .setColor('#2f3136')
+                .setColor('Random')
 
             return inter.editReply({ embeds: [NoVoiceEmbed] });
         }
 
             const playEmbed = new EmbedBuilder()
                 .setAuthor({ name: `Loading your ${res.playlist ? 'playlist' : 'track'} to the queue... ✅`})
-                .setColor('#2f3136')
+                .setColor('Random')
                 
             await inter.editReply({ embeds: [playEmbed] });
 
@@ -64,7 +71,10 @@ module.exports = {
         //console.log(`Song Name: ${res.tracks},\nSong url: ${song},\nServer Name: ${inter.guild.name},\nRequested By: ${inter.member.user.tag}.`);
 
         //DM Ayinaki For logging
-        client.users.send('164062855115571200', `Song Name: ${res.tracks},\nSong URL: ${song},\nServer Name: ${inter.guild.name},\nRequested By: ${inter.member.user.tag}.`);
+        //client.users.send('164062855115571200', `Song Name: ${res.tracks},\nSong URL: ${song},\nServer Name: ${inter.guild.name},\nRequested By: ${inter.member.user.tag}.`);
+        console.log("Soundcloud Error check 2")
+        console.log(soundcloudbug)
+
 
         if (!queue.isPlaying()) await queue.node.play();
     },

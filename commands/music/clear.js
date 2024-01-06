@@ -18,7 +18,7 @@ const queue = useQueue(inter.guild);
 
         const ClearEmbed = new EmbedBuilder()
         .setAuthor({name: `The queue has just been cleared 🗑️`})
-        .setColor('#2f3136')
+        .setColor('Random')
         
         inter.editReply({ embeds: [ClearEmbed] });
 

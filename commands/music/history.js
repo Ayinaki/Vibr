@@ -22,7 +22,7 @@ const queue = useQueue(inter.guild);
         let HistoryEmbed = new EmbedBuilder()
             .setTitle(`History`)
             .setDescription(description)
-            .setColor('#2f3136')
+            .setColor('Random')
             .setTimestamp()
             .setFooter({ text: '❤️ - Ayinaki', iconURL: inter.member.avatarURL({ dynamic: true })})
 

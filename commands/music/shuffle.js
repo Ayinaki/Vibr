@@ -18,7 +18,7 @@ const queue = useQueue(inter.guild);
         await queue.tracks.shuffle();
 
         const ShuffleEmbed = new EmbedBuilder()
-        .setColor('#2f3136')
+        .setColor('Random')
         .setAuthor({name: `Queue shuffled ${queue.tracks.size} song(s)! ✅` })
 
 

@@ -3,7 +3,7 @@ module.exports = (queue) => {
 
     const emptyChannel = new EmbedBuilder()
     .setAuthor({name: `Nobody is in the voice channel, leaving the voice channel!  ❌`})
-    .setColor('#2f3136')
+    .setColor('Random')
 
 queue.metadata.send({ embeds: [emptyChannel] })
 }

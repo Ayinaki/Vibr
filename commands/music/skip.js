@@ -16,7 +16,7 @@ const queue = useQueue(inter.guild);
         const success = queue.node.skip();
 
         const SkipEmbed = new EmbedBuilder()
-        .setColor('#2f3136')
+        .setColor('Random')
         .setAuthor({name: success ? `Current music ${queue.currentTrack.title} skipped ✅` : `Something went wrong ${inter.member}... try again ? ❌` })
 
 

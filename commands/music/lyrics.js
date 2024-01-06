@@ -26,7 +26,7 @@ const queue = useQueue(inter.guild);
             embeds.push(new EmbedBuilder()
                 .setTitle(`Lyrics for ${queue.currentTrack.title}`)
                 .setDescription(toSend)
-                .setColor('#2f3136')
+                .setColor('Random')
                 .setTimestamp()
                 .setFooter({ text: '❤️ - Ayinaki', iconURL: inter.member.avatarURL({ dynamic: true })})
                 );

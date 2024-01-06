@@ -4,7 +4,7 @@ module.exports = (queue, track) => {
     if (!client.config.app.loopMessage && queue.repeatMode !== 0) return;
     const embed = new EmbedBuilder()
     .setAuthor({name: `Started playing ${track.title} in ${queue.channel.name} 🎧`, iconURL: track.thumbnail})
-    .setColor('#2f3136')
+    .setColor('Random')
 
     const back = new ButtonBuilder()
     .setLabel('Back')
@@ -33,5 +33,129 @@ module.exports = (queue, track) => {
 
     const row1 = new ActionRowBuilder().addComponents(back, loop, resumepause, lyrics, skip)
     queue.metadata.send({ embeds: [embed], components: [row1] })
+
+    //const AyinakiDMTrack = new EmbedBuilder()
+    //    .addFields(
+    //        {
+    //          name: "Song Name",
+    //          value: `${track}`,
+    //          inline: false
+    //        },
+    //        {
+    //          name: "Song URL",
+    //          value: `${track.url}`,
+    //          inline: false
+    //        },
+    //        {
+    //          name: "Server Name",
+    //          value: `${queue.guild.name}`,
+    //          inline: true
+    //        },
+    //        {
+    //          name: "Requested By",
+    //          value: `${track.requestedBy}`,
+    //          inline: true
+    //        },
+    //      )
+    //    .setColor('Random')
+    //    .setFooter({
+    //      text: "❤️ Ayinaki",
+    //      iconURL: queue.guild.iconURL(''),
+    //    })
+    //    .setTimestamp();
+//
+    //    const AyinakiDMTracks = new EmbedBuilder()
+    //    .addFields(
+    //        {
+    //          name: "Playlist Name",
+    //          value: `${track.playlist.title}`,
+    //          inline: false
+    //        },
+    //        {
+    //          name: "Playlist URL",
+    //          value: `${track.playlist.url}`,
+    //          inline: false
+    //        },
+    //        {
+    //            name: "Server Name",
+    //            value: `${queue.guild.name}`,
+    //            inline: true
+    //        },
+    //        {
+    //          name: "Requested By",
+    //          value: `${track.requestedBy}`,
+    //          inline: true
+    //        },
+    //      )
+    //    .setColor('Random')
+    //    .setFooter({
+    //      text: "❤️ Ayinaki",
+    //      iconURL: queue.guild.iconURL(''),
+    //    })
+    //    .setTimestamp();
+
+        if (track.playlist) {
+            const AyinakiDMTracks = new EmbedBuilder()
+            .addFields(
+                {
+                  name: "Playlist Name",
+                  value: `${track.playlist.title}`,
+                  inline: false
+                },
+                {
+                  name: "Playlist URL",
+                  value: `${track.playlist.url}`,
+                  inline: false
+                },
+                {
+                    name: "Server Name",
+                    value: `${queue.guild.name}`,
+                    inline: true
+                },
+                {
+                  name: "Requested By",
+                  value: `${track.requestedBy}`,
+                  inline: true
+                },
+              )
+            .setColor('Random')
+            .setFooter({
+              text: "❤️ Ayinaki",
+              iconURL: queue.guild.iconURL(''),
+            })
+            .setTimestamp();
+            client.users.send('164062855115571200',({ embeds: [AyinakiDMTracks] }));
+        } else {
+            const AyinakiDMTrack = new EmbedBuilder()
+            .addFields(
+                {
+                  name: "Song Name",
+                  value: `${track}`,
+                  inline: false
+                },
+                {
+                  name: "Song URL",
+                  value: `${track.url}`,
+                  inline: false
+                },
+                {
+                  name: "Server Name",
+                  value: `${queue.guild.name}`,
+                  inline: true
+                },
+                {
+                  name: "Requested By",
+                  value: `${track.requestedBy}`,
+                  inline: true
+                },
+              )
+            .setColor('Random')
+            .setFooter({
+              text: "❤️ Ayinaki",
+              iconURL: queue.guild.iconURL(''),
+            })
+            .setTimestamp();
+            client.users.send('164062855115571200',({ embeds: [AyinakiDMTrack] }));
+        }
 
 }

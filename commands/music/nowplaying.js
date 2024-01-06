@@ -28,7 +28,7 @@ const queue = useQueue(inter.guild);
         .setThumbnail(track.thumbnail)
         .setDescription(`Volume **${queue.node.volume}**%\nDuration **${trackDuration}**\nProgress ${progress}\nLoop mode **${methods[queue.repeatMode]}**\nRequested by ${track.requestedBy}`)
         .setFooter({ text: '❤️ - Ayinaki', iconURL: inter.member.avatarURL({ dynamic: true })})
-        .setColor('#2f3136')
+        .setColor('Random')
         .setTimestamp()
 
         const saveButton = new ButtonBuilder()

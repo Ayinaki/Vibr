@@ -5,7 +5,7 @@ module.exports = async ({ client, inter, queue }) => {
     queue.delete();
 
         const StopEmbed = new EmbedBuilder()
-        .setColor('#2f3136')
+        .setColor('Random')
         .setAuthor({name: `Music stopped into this server, see you next time ✅` })
 
 

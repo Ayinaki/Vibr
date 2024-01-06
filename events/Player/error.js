@@ -4,7 +4,7 @@ module.exports = (queue, error) => {
     
     const ErrorEmbed = new EmbedBuilder()
     .setAuthor({name: `Bot had an unexpected error, please check the console imminently!`})
-    .setColor('#EE4B2B')
+    .setColor('#FFA500')
     
 queue.metadata.send({ embeds: [ErrorEmbed] })
 

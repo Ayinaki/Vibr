@@ -36,7 +36,7 @@ const queue = useQueue(inter.guild);
 
         const PlayNextEmbed = new EmbedBuilder()
         .setAuthor({name: `Track has been inserted into the queue... it will play next 🎧` })
-        .setColor('#2f3136')
+        .setColor('Random')
         
         await inter.editReply({ embeds: [PlayNextEmbed] });
 

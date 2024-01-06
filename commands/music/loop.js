@@ -24,7 +24,7 @@ module.exports = {
 
 const queue = useQueue(inter.guild);
         let BaseEmbed = new EmbedBuilder()
-        .setColor('#2f3136')
+        .setColor('Random')
 
         if (!queue || !queue.isPlaying()) return inter.editReply({ content: `No music currently playing ${inter.member}... try again ? ❌`, ephemeral: true });
         switch (inter.options._hoistedOptions.map(x => x.value).toString()) {

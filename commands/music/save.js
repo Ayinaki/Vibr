@@ -16,7 +16,7 @@ const queue = useQueue(inter.guild);
         inter.member.send({
             embeds: [
                 new EmbedBuilder()
-                    .setColor('#2f3136')
+                    .setColor('Random')
                     .setTitle(`:arrow_forward: ${queue.currentTrack.title}`)
                     .setURL(queue.currentTrack.url)
                     .addFields(

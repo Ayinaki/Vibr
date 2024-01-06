@@ -40,7 +40,7 @@ const queue = useQueue(inter.guild);
 
         const FilterEmbed = new EmbedBuilder()
         .setAuthor({name: `The filter ${filter} is now ${queue.filters.ffmpeg.isEnabled(filter) ? 'enabled' : 'disabled'} ✅\n*Reminder the longer the music is, the longer this will take.*`})
-        .setColor('#2f3136')
+        .setColor('Random')
 
        return inter.editReply({ embeds: [FilterEmbed] });
     },

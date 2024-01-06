@@ -32,7 +32,7 @@ const queue = useQueue(inter.guild);
         if (!track && !number) inter.editReply({ content: `You have to use one of the options to remove a song ${inter.member}... try again ? ❌`, ephemeral: true });
 
         const BaseEmbed = new EmbedBuilder()
-        .setColor('#2f3136')
+        .setColor('Random')
 
 
         if (track) {

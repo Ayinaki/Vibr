@@ -45,7 +45,7 @@ const queue = useQueue(inter.guild);
 
         const skipToEmbed = new EmbedBuilder()
         .setAuthor({name: `Skiped to ${trackname} ✅`})
-        .setColor('#2f3136')
+        .setColor('Random')
         
         inter.editReply({ embeds: [skipToEmbed] });
     }

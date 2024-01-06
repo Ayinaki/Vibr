@@ -24,7 +24,7 @@ const queue = useQueue(inter.guild);
         const tracks = queue.tracks.map((track, i) => `**${i + 1}** - ${track.title} | ${track.author} (requested by : ${track.requestedBy.username})`)
 
         const embed = new EmbedBuilder()
-        .setColor('#2f3136')
+        .setColor('Random')
         .setThumbnail(inter.guild.iconURL({ size: 2048, dynamic: true }))
         .setAuthor({name: `Server queue - ${inter.guild.name} ${methods[queue.repeatMode]}`, iconURL: client.user.displayAvatarURL({ size: 1024, dynamic: true })})
         .setDescription(`Current ${queue.currentTrack.title}\n\n${tracks.slice(0, 5).join('\n')}\n\n${nextSongs}`)

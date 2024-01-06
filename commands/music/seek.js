@@ -28,7 +28,7 @@ const queue = useQueue(inter.guild);
         await queue.node.seek(timeToMS);
 
         const SeekEmbed = new EmbedBuilder()
-        .setColor('#2f3136')
+        .setColor('Random')
         .setAuthor({name: `Time set on the current song **${ms(timeToMS, { long: true })}** ✅`})
 
 
