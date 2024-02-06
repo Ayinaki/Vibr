@@ -72,8 +72,8 @@ module.exports = {
 
         //DM Ayinaki For logging
         //client.users.send('164062855115571200', `Song Name: ${res.tracks},\nSong URL: ${song},\nServer Name: ${inter.guild.name},\nRequested By: ${inter.member.user.tag}.`);
-        console.log("Soundcloud Error check 2")
-        console.log(soundcloudbug)
+        //console.log("Soundcloud Error check 2")
+        //console.log(soundcloudbug)
 
 
         if (!queue.isPlaying()) await queue.node.play();
